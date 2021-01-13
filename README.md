@@ -51,7 +51,7 @@
 
 Your Name - jacobagdaca@gmail.com
 
-Project Link: [https://github.com/jagdaca/random-number-generator](https://github.com/jagdaca/angular-aws-chatbot)
+Project Link: [https://github.com/jagdaca/angular-aws-chatbot](https://github.com/jagdaca/angular-aws-chatbot)
 
 
 
