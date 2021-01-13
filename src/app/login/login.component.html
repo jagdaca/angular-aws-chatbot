@@ -1,0 +1,171 @@
+<div class="container-fluid d-flex flex-column">
+    <div class="row d-flex">
+        <div class="col-md-6 align-self-center">
+        <a href="">Back</a>
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <img 
+                        src="https://commons.deped.gov.ph/assets/deped-core-values-f0c2158fbf7e8c66b1beed63c82e6de78825ee64dc30c87d066513c046256104.png" 
+                        class="photo" 
+                        alt="deped image"
+                    >
+                    <img 
+                        src="https://commons.deped.gov.ph/assets/deped-digital-rise-1688c75b90f76401593cb4193eb3234bf00868b9f678c361d7af2cc6ccbf36da.jpg" 
+                        class="photo" 
+                        alt="deped image"
+                    >
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <img 
+                        src="https://commons.deped.gov.ph/assets/deped-commons-icon-90c0c49e05f78021e1e8fe1f2252937be70e4de6b57a0b4c41df4df6b1dbb55e.png" 
+                        class="small-photo" 
+                        alt="deped image"
+                    >
+                    <h5>Login as Student to DepEd Commons</h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <form 
+                        name="form"
+                        (ngSubmit)="onSubmit()"
+                        #f="ngForm"
+                        novalidate
+                    >
+                    
+                        <div class="form-group">
+                        <label> Email Address </label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            [(ngModel)]="form.email"
+                            required
+                            #email="ngModel"
+                            (input)="validateEmail()"
+                        >
+                        <div class="alert-danger" *ngIf="isInvalid || email.touched && email.invalid
+                        || f.submitted && email.invalid">
+                            <div *ngIf="!isInvalid && email.errors.required">Email is required</div>
+                            <div *ngIf="isInvalid">Email format is invalid</div>
+                        </div>
+                        </div>
+                
+                        <div class="form-group">
+                        <label> Password </label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            name="password"
+                            [(ngModel)]="form.password"
+                            required
+                            minlength="6"
+                            #password="ngModel"
+                        >
+                            <div class="alert-danger" *ngIf="password.touched && password.invalid
+                            || f.submitted && password.invalid">
+                                <div *ngIf="password.errors.required">Password is required</div>
+                                <div *ngIf="password.errors.minlength">
+                                    Password must be at least 6 characters
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <input 
+                                type="checkbox" 
+                                class="form-check-input" 
+                                name="keepMeLoggedIn" 
+                                id="keepMeLoggedIn" 
+                                [(ngModel)]="form.keepMeLoggedIn" 
+                                #keepMeLoggedIn="ngModel"
+                            >
+                            <label class="form-check-label" for="keepMeLoggedIn"> Keep me logged in </label>
+                        </div>
+                
+                        <div class="form-group">
+                        <button class = "btn btn-success btn-block" type="submit" style="background-color:#1637C0;">LOG IN</button>
+                        </div>
+                
+                        <div class="alert alert-warning" *ngIf="f.submitted && isLoginFailed">
+                            Login failed!<br />{{ errorMessage }}
+                        </div>
+                
+                        <div class="alert alert-success" *ngIf="isSuccessful">
+                        Your Login is successful!
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+            <div class="d-flex flex-column text-center">
+                <button type="button" class="btn btn-link">Forgot your password?</button>
+                <button type="button" class="btn btn-link">Didn't receive activation instructions?</button>
+            </div>
+            <br>
+            <div class="footer d-flex justify-content-between">
+                <button type="button" class="btn btn-link">User Guide</button>
+                <button type="button" class="btn btn-link">Terms of use & Privacy Policy</button>
+            </div>
+
+        </div>
+    
+        
+        <div class="col-md-6 position-relative justify-content-center align-items-center">
+            <img 
+                src="https://commons.deped.gov.ph/assets/accounts-login-illustration-3fa56118d85eed6807d03ba06e9c779ec36351d31ca2e28a206451a9892de03c.png" 
+                class="large-photo" 
+                alt="deped image"
+            >
+            <div class="container">
+                <div class="card stack-top">
+                    <div class="card-body">
+                        <p>To all mobile subscribers of Globe, TM, Smart, Sun and, TNT access to the site using the Globe/TM, Smart/Sun/TnT network will NOT incur data charges. This service of FREE access is brought to you by DepEd and Globe/Smart in cooperation with DICT and NTC. </p>
+                        <p>Important note: Links on the DepEd Commons page that require you to access the internet outside the Commons Domain, is beyond this coverage and may incur standard data charges. </p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="open-button" (click)='toggleName()'>Chat</button>
+
+            <div class="chat-popup-name" id="chat-name" *ngIf="showName">
+                <div class="container">
+                    <form
+                        class="form-inline"
+                        name="form"
+                        (ngSubmit)="chat()"
+                        #f="ngForm"
+                    >
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input
+                                    type="test"
+                                    class="form-control"
+                                    name="name"
+                                    [(ngModel)]="visitorName"
+                                    required
+                                    #name="ngModel"
+                                    placeholder="Provide your name"
+                                >
+                            </div>
+                        </div>
+                
+                        <div class="form-group">
+                            <button [disabled] = "!f.valid" class = "btn btn-success" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+ 
+            </div> 
+
+            <div [style.display]="chatDisplay" class="chat-popup" id="chat"></div> 
+
+        </div>
+    </div>
+</div>
+
+
