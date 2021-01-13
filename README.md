@@ -1,27 +1,72 @@
-# AngularDeped
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+<br />
+<p align="center">
 
-## Development server
+  <h3 align="center">AWS Chatbot Integration</h3>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  <p align="center">
+    A simple integration of AWS chatbot + Amazon Lex to an Angular web page.
+    <br />
+    <a href="https://youtu.be/GQTkmkzrF2E">View Quick Demo</a>
+  </p>
+</p>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-## Running end-to-end tests
+### Built With
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* [Angular 10](https://angular.io/)
+* [AWS](https://aws.amazon.com/)
 
-## Further help
+### Prerequisites
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* npm
+* AWS Account
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - jacobagdaca@gmail.com
+
+Project Link: [https://github.com/jagdaca/random-number-generator](https://github.com/jagdaca/angular-aws-chatbot)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [Google](https://www.google.com/)
+* [YouTube](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO)
+* [StackOverflow](https://stackoverflow.com/search?q=how+to+program&s=8d10fbde-eda2-44e2-9f47-c211996d723e)
+
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
